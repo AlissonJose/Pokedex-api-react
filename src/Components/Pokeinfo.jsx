@@ -8,10 +8,13 @@ const Pokeinfo = ({ data }) => {
       {
         (!data) ? "" : (
           <>
-          
+          </>
+        )
+      }
 
       <h1>{data.name}</h1>
       <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${data.id}.svg`} alt=""
+
       />
       <div className="abilities">
 
@@ -46,7 +49,7 @@ const Pokeinfo = ({ data }) => {
 
     </>
 
-      )
-
+  )
+};
 
 export default Pokeinfo;
