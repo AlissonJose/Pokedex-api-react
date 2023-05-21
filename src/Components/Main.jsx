@@ -22,7 +22,7 @@ const Main = () => {
     setPrevUrl(res.data.previous);
     getPokemon(res.data.results)
     setLoading(false)
-    //onsole.log(pokeData)
+    //console.log(pokeData)
 
   }
   const getPokemon=async(res)=>{

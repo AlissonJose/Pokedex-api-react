@@ -4,8 +4,8 @@
   margin: 0;
   font-family: "Roboto", sans-serif;
 }
-body {
-  background-color: #fceec8;
+.body style {
+  background-color: blue;
 }
 .container {
   width: 90%;
