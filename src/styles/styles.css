@@ -5,12 +5,11 @@
   font-family: "Roboto", sans-serif;
 }
 
-body {
-  background: blue;
-}
 .container {
-  width: 90%;
+  width: 100%;
+  height: 100vh;
   margin: auto;
+  background-image: linear-gradient(to left, #fcfeff, #8adaff);
   padding-top: 100px;
   display: flex;
 }
@@ -24,13 +23,13 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(200px, 0.5fr));
   grid-gap: 2rem;
 }
-.card {
+.card  {
   font-size: 12px;
   border: none;
   border-radius: 30px;
   color: #fff;
   line-height: 0.5;
-  text-transform: uppercase;
+  text-transform: capitalize;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,6 +39,11 @@ body {
   background: -o-linear-gradient(to left, #21d4fd, #b721ff);
   background: -moz-linear-gradient(to left, #21d4fd, #b721ff);
   background: linear-gradient(to left, #21d4fd, #b721ff);
+}
+
+.card:hover{
+transform: scale(1.1);
+transition: 0.8s linear;
 }
 .right-content {
   width: 50%;
@@ -55,8 +59,8 @@ body {
   height: 180px;
 }
 
-right-content h1 {
-  text-transform: uppercase;
+.right-content h1 {
+  text-transform: capitalize;
   font-weight: bold;
   letter-spacing: 1px;
 }
@@ -70,15 +74,16 @@ right-content h1 {
 }
 
 .abilities .group {
-  font-size: 15px;
+  font-size: 12px;
     border: none;
     border-radius: 10px;
     color: #fff;
     line-height: 1.2;
-    text-transform: uppercase;
+    text-transform: capitalize;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 20px;
     width: 100%;
     height: 50px;
     background: -webkit-linear-gradient(to left, #21d4fd, #b721ff);
@@ -95,16 +100,17 @@ right-content h1 {
   display: flex;
 }
 .btn-group button {
-  font-size: 15px;
+  font-size: 12px;
   border: none;
   border-radius: 10px;
   color: #fff;
   line-height: 1.2;
-  text-transform: uppercase;
+  text-transform: capitalize;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin-right: 20px;
   height: 50px;
   background: -webkit-linear-gradient(to left, #21d4fd, #b721ff);
   background: -o-linear-gradient(to left, #21d4fd, #b721ff);

@@ -13,7 +13,7 @@ const Main = () => {
   const [prevUrl,setPrevUrl]=useState();
   const [pokeDex, setPokeDex]=useState();
 
-  const pokeFun=async()=>{
+  const pokeFun = async ()=>{
     setLoading(true)
     const res=await axios.get(url);
     //console.log(res.data.results)
@@ -41,6 +41,18 @@ const Main = () => {
       useEffect(()=>{
       pokeFun();
   },[url])
+
+  function handlePreview() {
+    setPokeData([])
+    setUrl(prevUrl)
+  }
+
+  function handleNext() {
+    setPokeData([]) 
+    setUrl(nextUrl)
+  }
+
+
   return (
     <>
       <div className="container">
@@ -48,17 +60,9 @@ const Main = () => {
           <Card pokemon={pokeData} loading={loading} infoPokemon={poke=>setPokeDex(poke)} />
                    
           <div className="btn-group">
-            {prevUrl &&  <button onClick={()=>{
-              setPokeData([])
-              setLoadingUrl(prevUrl)
+            {prevUrl &&  <button onClick={handlePreview}>Previous</button>}
 
-            }}>Previous</button>}
-
-            {nextUrl && <button onClick={()=>{
-            setPokeData([]) 
-            setUrl(nextUrl)
-            }}>Next</button>}
-
+            {nextUrl && <button onClick={handleNext}>Next</button>}
           </div>
         </div>
       </div>
